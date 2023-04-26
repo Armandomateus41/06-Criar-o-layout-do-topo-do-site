@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+}
+
+:root {
+   --main-color: #040714;
+   --site-color: #fff;
+   --active-color: #0063e5;
+   --first-color: #08132f;
+   --second-color: #090b13;
+   --third-color: #1b202a;
+}
+
+body {
+   background-color: var(--main-color);
+   color: var(--site-color);
+}
+
+.max-width {
+   max-width: 1300px;
+   padding: 0 10px;
+   margin: auto;
+}
+/*  inciio do menu */
+.navbar .logo a {
+   color: var(--active-color);
+   font-size: 35px;
+   font-weight: 500;
+}
+
+.navbar {
+   position: fixed;
+   width: 100%;
+   z-index: 999;
+   padding: 20px 0;
+   font-family: 'Ubuntu', sans-serif;
+   background-color: var(--main-color);
+   border-bottom: solid var(--third-color) 1px;
+}
+
+.navbar .max-width {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.navbar .menu li {
+   list-style: none;
+   display: inline-block;
+}
+
+.navbar .menu li a {
+   display: block;
+   color: var(--site-color);
+   font-size: 18px;
+   font-weight: 400;
+   margin-left: 25px;
+}
+
+.menu-btn {
+   color: var(--site-color);
+   font-size: 23px;
+   cursor: pointer;
+   display: none;
+}
+
+@media (max-width: 947px) {
+   .menu-btn {
+       display: block;
+       z-index: 999;
+   }
+   #menu-icon.active::before {
+       content: "\f00d";
+   }
+   .navbar .menu {
+       background-color: var(--main-color);
+       position: fixed;
+       height: 100vh;
+       width: 100%;
+       left: -100%;
+       top: 0;
+       text-align: center;
+       padding-top: 80px;
+       transition: all 0.3s ease;
+   }
+   #menu-site.active {
+       left: 0;
+   }
+   .navbar .menu li {
+       display: block;
+   }
+   .navbar .menu li a {
+       display: inline-block;
+       margin: 13px 0;
+       font-size: 25px;
+   }
+}
+
+/*fim do menu */
+
+/*Incio  do Top */
+
+/*Inicio serviço */
+
+section {
+   padding: 50px 0;
+
+}
+
+@mdia(max-width: 690px){
+   section{ 
+      padding: 20px 0;
+
+   }
+}
+
+.top{
+   color:var(--site-color); /* aqui e para troca a cor do top*/
+   display: flex;
+   /*background: url("../images/0gZK8P.jpg") no-repeat center;*/
+   background: linear-gradient(to right, var(--main-color) 25%, rgba(255,255,255,
+   0)), url("../images/0gZK8P.jpg") no-repeat center;  /*server para adicionar fundo fusco na imagem*/
+   height: 100vh;
+   min-height: 500px;
+   background-size: cover; /* indica que cobre a imagem*/
+   background-attachment: fixed; /*significa que a imagem e fixa*/
+   font-family:'Ubuntu',sans-serif;
+
+}
+
+.top .max-width{
+   width: 100%;
+   display: flex;
+}
+ 
+.top .top-content .text-1 {
+    font-size: 55px;
+
+}
+.top .top-content .text-2 {
+   font-size: 55px;
+   font-weight: 400;
+   margin-left: -3px;
+}
+ 
+.top .top-content .text-3 {
+   font-size: -32px;
+   margin: 5px 0;
+
+
+}
+
+.top .top-content a {
+   display: inline-block;
+   background: var(--active-color);
+   color: var(--site-color);
+   font-size: 25px;
+   padding: 12px 36px;
+   margin-top: 20px; 
+   font-weight: 300; /**server para adicionar a largura**/
+   border-radius: 6px; /**para adicionar borda*/
+ transition: all 00.3s ease;  /**server para adicionar transição mais leve no botão*/
+}
+
+
+.top .top-content a:hover{ /**server para troca a cor do fundo do botão contato*/
+ color: var(--active-color);
+ background: none;  
+}
+
+/* Fim do Topo */
+
+.services{
+   color: var(--site-color);
+   background-color: var(--main-color);
+   font-family: 'Poppins', sans-serif;
+   margin: 60px;
+}
+
+.services .title{
+   text-align: center;
+   margin: 40px 0;
+   font-size: 35px;
+}
+
+.services .serv-content{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.services .serv-content .card {
+   width: calc(33% - 20px);
+   background-color: var(--first-color);
+   text-align: center; /* serve para centralizar*/
+   border-radius: 6px; /* serve para colocar a borda*/
+   padding: 50px  25px;
+   cursor: pointer; /* serve para colocar a mouse clicavel*/
+   transition: all 0.5s ease; /*troca o movimento do icone*/
+}
+
+.services .serv-content .card:hover{
+  background: var(--active-color); /*troca cor do fundo*/
+}
+
+.services .serv-content .card i{
+   font-size: 50px;
+   color: var(--active-color); /* serve para troca a cor do icone*/
+   transition: all 000.3s ease;
+}
+
+.services .serv-content .card:hover i{
+   color: var(--site-color);
+}
+
+.services .serv-content .card .box{
+   transition: all 00.3s ease;
+
+}
+
+.servie .serv-content .card:hover .box{
+   transform: scale(1.05); /*transforma transição para aproximação*/
+
+}
+/*
+altera a cor de fundo do cartão7
+*/
+
+.services .serv-content .card .text{
+   font-size: 25px;
+   font-weight: 500;
+   margin: 10px 0 7px 0;
+}
+
+@media (max-width: 947px) { /*esta parte e para celular*/
+   .services .serv-content .card{
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+     
+   }
+}
+
+@media (max-width: 690px){ /* quando a leta do celular estiver e formato maximo*/
+   .services .serv-content .card{
+   width: 100%;
+
+   }
+}
+
+/* Fim do Serviço */
+
+/* Inicio do serviço premium*/ 
+
+.premium {
+   color: var(--site-color); /* cor do fundo do tema do serviço*/
+   background: var(--first-color);
+   font-family: 'Poppins',  sans-serif; /*fonte da letra*/
+
+
+}
+.premium  .title{
+   text-align: center; /*serve para centralizar*/
+   margin: 50px 0;
+    font-weight: 400; /* espesura da fonte*/
+    font-size: 35px;
+}
+
+.premium .premium-content {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   
+}
+
+ 
+.premium .premium-content .right{ /* lateral esquerda*/
+   width: 45%;
+}
+
+.premium .premium-content .left img {
+   width: 400px; /*largura*/
+   height: 400px; /*altura*/
+   object-fit: cover;
+   border-radius: 6px; /*borda da imagem*/ 
+
+}
+ 
+.premium .premium-content .right{ /* lateral direito*/
+   width: 55%;
+}
+
+.premium .premium-content .right .text{ /* altera o tamanho do texto*/
+   font-size : 25px;
+   font-weight: 400;
+   margin-bottom: 10px;
+}
+
+.premium .premium-content .right p{ /*serve para centralizar o 2 texto e formato unico*/
+   text-align: justify; /* centralizar as palavras*/
+
+}
+
+.premium  .premium-content a{ /** personalizar o botão*/
+   display: inline-block;
+   background: var(--active-color);
+   color: var(--site-color);
+   font-size: 20px;
+   font-weight: 500;
+   padding: 10px  30px; /*personalizar o tamanho do botão*/
+   margin-top: 20px;
+   border-radius: 6px;
+   border: 2px solid var(--active-color);
+   transition: all 0.35s ease;
+
+
+
+}
+
+.premium .premium-content .right a:hover{/*Mouse*/
+   color: var(--active-color);
+   background: none; /*Não apresenta a cor do fundo do botão contato*/
+
+
+}
+
+
+@media (max-width: 1104px) {/*para dispositivos moveis */
+   .premium .premium-content .left img{
+      width: 350px; /* largura */
+      height: 350px; /* Altrua*/
+
+   }
+}
+
+@media (max-width: 947px) {/* para celular*/
+   .premium .premium-content .column{
+      width: 100%
+
+   }
+   .premium .premium-content .left {
+   display: flex;
+   justify-content: center;
+   margin: 0 auto  60px;
+   }
+   .premium .premium-content { /*personalizar lateral direito*/
+      flex: 100%;
+   }
+}
+
+/* Fim do  serviço premium*/
+
+
+/* Inicio do  Ropade*/
+ footer{
+   background: var(--second-color);  /**cor do fundo do rodape*/
+   padding: 25px 23px; /*é responsável por definir uma distância */
+    color :var(--site-color); /*para definir a cor da letra*/
+    text-align: center; /* centralizar no centro*/
+    font-family: 'Poppins', sans-serif; /* tipo de letra*/
+
+ }
+
+ footer  span  a{
+   color: var(--active-color);
+ }
+
+ footer  span  a:hover {
+   color: var(--site-color);
+ }
+
+/* Fim do  fim do Rodape/
+
+/* Inicio da pagina sobre empresa */
+
+.about {
+ color: var (--site-color);
+ background: (--main-color);
+ font-family: 'Poppins', sans-serif;
+}
+
+.about .title{
+   text-align: center; /* centralizar o testo*/
+   margin-bottom: 50px;
+   font-weight: 400;
+   font-size: 35px; /* tamanho da fonte*/
+   padding-top: 50px; /* parte superior */
+
+}
+
+.about .about-content{
+   display: flex;  /* para  conteudo */
+   flex-wrap: wrap;
+   align-items: center; /* colocar no centro*/
+   justify-content: space-between; /* espaço para conteudo*/
+   margin-bottom: 50px; /* margem para conteudo*/
+   background-color: var(--first-color); /*cor do fundo*/
+    border-radius: 6px; /* borda da cor do fundo*/
+    padding: 30px;/* espaço da cor do fundo*/
+
+}
+.about .about-content .left{ /* conteudo da lateral esquerdo*/
+   width: 40%; /*para a cor  ocupar 40 %*/
+
+
+}
+
+.about .about-content .left img { /* ajusta imagem*/
+   width: 400px; /*largura da imagem*/
+   height: 400px;/*altura da imagem*/
+   object-fit: cover;
+   border-radius: 6px; /*adiciona borda na img*/
+}
+
+.about .about-content .right{
+   width: 60%;
+}
+
+.about .about-content .right .text{
+   font-size: 25px;
+   font-weight: 400;
+   margin-bottom: 10px;
+}
+
+.about .about-content .right p {
+   text-align: justify;
+
+
+}
+
+ @media (max-width: 1104px) { /* se for no ipad pou table*/
+   .about .about-content .right {
+      width: 300px;
+      height: 300px;
+
+   }
+   .about .about-content.right{
+      padding-left: 10px;
+   }
+
+ }
+ @media (max-width: 947px) {
+   .about .about-content .column{
+      width: 100%;
+   }
+   .about .about-content .left { /* se for no celular*/
+      display: flex;
+      justify-content: center; /* centralizar as imagem*/
+      margin: 0 auto 60px;
+   }
+   .about .about-content .right{ /* lateral direito texto*/
+      flex: 100%; /* para ocupar 100% espaço*/
+      padding-left: 0;
+
+   }
+   
+ }
+
+ @media (max-width: 740px)  { /*titulo principal "Sobre Empresa"*/
+   .about .title {
+      margin-top: 50px;
+   }
+   
+ }
+
+
+/* Fim da pagina sobre empresa */
+
+
+/* Incio da pagina contato*/
+
+.contato {
+   color: var(--site-color); /* cor da letra*/
+   background: var(--main-color);/* cor do fundo*/
+   font-family: 'Poppins', sans-serif; /* Tipo de letra*/
+   
+}
+
+.contato .title{ /*para corganizar o tituto principal*/
+    text-align: center; /* centralizar no topo*/
+    margin-bottom: 50px;
+    padding-top: 50px;
+    font-weight:400;
+    font-size: 35px; 
+}
+
+.contato .contato-content{ /*centralizar as coisa */
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between; /*serve para da espaço entre elemento*/
+}
+
+.contato .contato-content .column{
+   width: calc(50% - 30px);
+
+}
+
+.contato .contato-content .left p{
+   text-align: justify; /* deixa o conteudo jusiticado*/
+}
+
+.contact .contact-content .left .icons {
+   margin: 10px 0;
+}
+
+.contact .contact-content .row {
+   display: flex;
+   height: 65px;
+   align-items: center;
+}
+
+.contact .contact-content .row .info {
+   margin-left: 30px;
+}
+
+.contato .contato-content .row i{ /* mudar a cor e configura o icone*/
+   font-size: 25px;
+   color: var(--active-color); 
+}
+
+.contato .contato-content .info .head{
+ font-weight: 500;
+}
+
+
+.contato .contato-content .info .sub-title{ /* altera o subtitulo*/
+   font-weight: 500;
+   color: var(--site-color);
+  }
+
+  .contato .contato-content .text{ /* altera o texto mensagem do contato*/
+   font-size: 20px; /* fonte da letra*/
+   font-weight: 500; 
+   margin-bottom: 10px; /* margem com 10 px*/
+
+  }
+
+  .contato .right form .field,
+  .contato .right form .fields .field {
+      height: 45px;
+      width: 100%;
+      margin-bottom: 15px;
+  }
+  
+  .contato .right form .textarea {
+      height: 80px;
+      width: 100%;
+  }
+  
+  .contato .right form .field input,
+  .contato .right form .field textarea { /* confirgura o espaço de borda*/
+      height: 100%;
+      width: 100%;
+      border-radius: 6px;
+      outline: none;
+      padding: 0 10px;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+  }
+
+ .contato .right .form .input:focus,
+ .contato .right .form .textarea:focus {
+    border color : var(--active-color);
+ }  
+
+
+ .contato .right form .textarea textarea {
+   padding-top: 10px;
+   resize: none;
+}
+
+
+.contato .right .form .button-area{ /*confirgura botão*/
+   display: flex;
+   align-items: center;
+}
+
+.right .form .button-area button{
+   background-color: var(--active-color);
+   color: var(--active-color);
+   display: block;
+   width: 160px !important; /* importante siginfar importacia da tag*/
+   height: 45px;
+
+   outline: none;
+   font-size: 18px;
+   font-weight: 400;
+   
+}
+
+
+/* Fim da pagina contato*/
